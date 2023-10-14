@@ -46,39 +46,39 @@ if 'jonathan' in teste:
 elif 'in' in teste:
     pass
 
-
-# print("Have in")
+print("Have in")
 
 # CHECK IF PASSWORD IS STRONG
-# password = input("Enter new password")
-#
-# results = {
-#
-# }
-#
-# if len(password) >= 8:
-#     results["length"] = True
-# else:
-#     results["length"] = False
-#
-# has_number = False
-# for letter in password:
-#     if letter.isdigit():
-#         has_number = True
-#
-# results["digits"] = has_number
-#
-# has_upper = False
-#
-# for letter in password:
-#     if letter.isupper():
-#         has_upper = True
-# results["upper"] = has_upper
-#
-# if all(results.values()):
-#     print("Strong Password")
-# else:
-#     print("Weak Password")
+password = input("Enter new password")
+
+results = {
+
+}
+
+if len(password) >= 8:
+    results["length"] = True
+else:
+    results["length"] = False
+
+has_number = False
+for letter in password:
+    if letter.isdigit():
+        has_number = True
+
+results["digits"] = has_number
+
+has_upper = False
+
+for letter in password:
+    if letter.isupper():
+        has_upper = True
+results["upper"] = has_upper
+
+if all(results.values()):
+    print("Strong Password")
+else:
+    print("Weak Password")
+
 
 def is_leap(year):
     leap = False

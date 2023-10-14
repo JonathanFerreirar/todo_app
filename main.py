@@ -1,20 +1,7 @@
-from typing import NewType, Union
+from functions import get_todos, write_todos
+import time
 
-
-def get_todos(filepath: str = 'todos.txt'):
-    with open(filepath) as files:
-        todos_local: [str] = files.readlines()
-
-    return todos_local
-
-
-type_write = NewType("type_write", Union[str | list[str]])
-
-
-def write_todos(argument: type_write, filepath: str = 'todos.txt'):
-    with open(filepath, 'w') as files:
-        files.writelines(argument)
-
+now = time.strftime("%b %d, %y %H:%M:%S")
 
 while True:
     user_action = input("Type add, list, edit, done or exit: ").strip()
