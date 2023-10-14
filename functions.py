@@ -1,3 +1,5 @@
+import os
+
 from typing import NewType, Union
 
 FILEPATH = "todos.txt"
@@ -32,3 +34,7 @@ def write_todos(argument: type_write, filepath: str = FILEPATH):
 
     with open(filepath, 'w') as files:
         files.writelines(argument)
+
+
+def clear_console():
+    os.system('clear')
