@@ -4,3 +4,4 @@ just a test with a new ide
 testing if edit is working well
 testing if is working well
 for hour everything working very well
+lest see if the gui are working
