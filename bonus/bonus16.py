@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-
 from zip_create import make_archive
 
 label1 = sg.Text("Select files to compress: ")
@@ -21,26 +20,13 @@ window = sg.Window("File Compressor", layout=[
 
 while True:
     event, values = window.read()
-    filepaths = values["files"].split(';')
-    folder = values["folder"]
-    make_archive(filepaths, folder)
-    window['output'].update(value='Compression completed!')
+    match event:
+        case 'Compressor':
+            filepaths = values["files"].split(';')
+            folder = values["folder"]
+            make_archive(filepaths, folder)
+            window['output'].update(value='Compression completed!')
+        case sg.WIN_CLOSED:
+            break
 
 window.close()
-
-# label1 = sg.Text("Enter feet")
-# label2 = sg.Text("Enter inches")
-#
-# input1 = sg.InputText()
-# input2 = sg.InputText()
-#
-# button = sg.Button("Convert")
-#
-# window = sg.Window("Converto", layout=[
-#     [label1, input1],
-#     [label2, input2],
-#     [button]
-# ])
-#
-# window.read()
-# window.close()
