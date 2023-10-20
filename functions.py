@@ -38,3 +38,9 @@ def write_todos(argument: type_write, filepath: str = FILEPATH):
 
 def clear_console():
     os.system('clear')
+
+
+def return_to_home_directory():
+    home_directory = os.path.expanduser("~")
+
+    os.chdir(home_directory)
